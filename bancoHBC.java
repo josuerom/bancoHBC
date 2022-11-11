@@ -6,27 +6,6 @@ class bancoHBC {
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
         Cuenta obj = new Cuenta(123, "Kevin el loco Moreno", 150000, "CA");
-        
-        /*do {
-            System.out.println("MENU DE OPCIONES. Presione");
-            System.out.println("1. Depositar");
-            System.out.println("2. Retirar");
-            System.out.println("3. Consultar saldo");
-            System.out.println("4. Salir");
-            System.out.println("------------------------------");
-            System.out.print("Digite su opcion: ");
-            opcion = sc.nextInt();
-            
-            switch (opcion) {
-                case 1: System.out.println("Hola");
-                break;
-                case 2: 
-                break;
-                case 3: 
-                break;
-                default: System.out.println("La opcion no existe, gracias por usar nuestro software.");
-            }
-        } while (opcion != 4);*/
     }
 }
 
@@ -41,6 +20,16 @@ class Cuenta {
         this.nombre = nombre;
         this.saldo = saldo;
         this.tipo_cuenta = tipo_cuenta;
+    }
+    
+    public void tipoCuenta() {
+    }
+    
+    public float getSaldo() {
+        return saldo;
+    }
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
     }
 }
 
@@ -57,7 +46,7 @@ class CuentaAhorro extends Cuenta {
     }
     
     public void consultarSaldo() {
-        System.out.println("Su saldo actual es de: $" + saldo);
+        System.out.println("Su saldo actual es de: $" + getSaldo());
     }
 }
 
@@ -75,6 +64,6 @@ class CuentaCorriente extends Cuenta {
     }
     
     public void consultarSaldo() {
-        System.out.println("Su saldo actual es de: $" + saldo);
+        System.out.println("Su saldo actual es de: $" + getSaldo());
     }
 }
